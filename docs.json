@@ -1,0 +1,501 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "desc" : "UNKNOWN DESC",
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "Constructor" : [
+
+    ],
+    "doc" : "",
+    "Method" : [
+      {
+        "def" : "MouseBind:debug(enable)",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "name" : "debug",
+        "doc" : "Enable or disable debugging\n\nParameters:\n * enable - Boolean indicating whether debugging should be on\n\nReturns:\n * Nothing",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:debug(enable)",
+        "type" : "Method",
+        "returns" : [
+          " * Nothing"
+        ],
+        "desc" : "Enable or disable debugging",
+        "parameters" : [
+          " * enable - Boolean indicating whether debugging should be on",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:init()",
+        "stripped_doc" : [
+          "Initializes a MouseBind",
+          "When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua",
+          "from the relevant s.",
+          "Do generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.",
+          "in the main scope of your init.lua. Instead, it should simply prepare an object",
+          "with methods to be used later, then return the object.",
+          ""
+        ],
+        "name" : "init",
+        "doc" : "Initializes a MouseBind\nWhen a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua\nfrom the relevant s.\nDo generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.\nin the main scope of your init.lua. Instead, it should simply prepare an object\nwith methods to be used later, then return the object.\n\nParameters:\n * None\n\nReturns:\n * MouseBind object",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:init()",
+        "type" : "Method",
+        "returns" : [
+          " * MouseBind object"
+        ],
+        "desc" : "Initializes a MouseBind",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:start()",
+        "stripped_doc" : [
+          "Start background activity.",
+          ""
+        ],
+        "name" : "start",
+        "doc" : "Start background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * MouseBind object",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:start()",
+        "type" : "Method",
+        "returns" : [
+          " * MouseBind object"
+        ],
+        "desc" : "Start background activity.",
+        "parameters" : [
+          " * param - Some parameter",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:stop()",
+        "stripped_doc" : [
+          "Stop background activity.",
+          ""
+        ],
+        "name" : "stop",
+        "doc" : "Stop background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * MouseBind object",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * MouseBind object"
+        ],
+        "desc" : "Stop background activity.",
+        "parameters" : [
+          " * param - Some parameter",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:createBinding()",
+        "stripped_doc" : [
+          "Create a new binding between a mouse event and an action. Returns a",
+          "MouseBinding object.",
+          "This is a wrapper around MouseBinding.new():enable()",
+          ""
+        ],
+        "name" : "createBinding",
+        "doc" : "Create a new binding between a mouse event and an action. Returns a\nMouseBinding object.\nThis is a wrapper around MouseBinding.new():enable()\n\nParameters:\n * mods - A table or a string containing (as elements, or as substrings with any\n   separator) the keyboard modifiers required, which should be zero or more of the\n   following:\n     \"cmd\", \"command\" or \"⌘\"\n     \"ctrl\", \"control\" or \"⌃\"\n     \"alt\", \"option\" or \"⌥\"\n     \"shift\" or \"⇧\"\n * typeName - A string containing the name of an event type, as described in\n   hs.eventtap.event.types\n * message - A string containing a message to be displayed via hs.alert()\n   when the mouse event has been triggered; if nil, no alert will be shown\n   Note that unlike hs.hotkey, this parameter must be present.\n * fn - A function that will be called when mouse event is detected.\n\nReturns:\n *  MouseBinding istance.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:createBinding()",
+        "type" : "Method",
+        "returns" : [
+          " *  MouseBinding istance."
+        ],
+        "desc" : "Create a new binding between a mouse event and an action. Returns a",
+        "parameters" : [
+          " * mods - A table or a string containing (as elements, or as substrings with any",
+          "   separator) the keyboard modifiers required, which should be zero or more of the",
+          "   following:",
+          "     \"cmd\", \"command\" or \"⌘\"",
+          "     \"ctrl\", \"control\" or \"⌃\"",
+          "     \"alt\", \"option\" or \"⌥\"",
+          "     \"shift\" or \"⇧\"",
+          " * typeName - A string containing the name of an event type, as described in",
+          "   hs.eventtap.event.types",
+          " * message - A string containing a message to be displayed via hs.alert()",
+          "   when the mouse event has been triggered; if nil, no alert will be shown",
+          "   Note that unlike hs.hotkey, this parameter must be present.",
+          " * fn - A function that will be called when mouse event is detected.",
+          ""
+        ]
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "def" : "MouseBind:createBinding()",
+        "stripped_doc" : [
+          "Create a new binding between a mouse event and an action. Returns a",
+          "MouseBinding object.",
+          "This is a wrapper around MouseBinding.new():enable()",
+          ""
+        ],
+        "name" : "createBinding",
+        "doc" : "Create a new binding between a mouse event and an action. Returns a\nMouseBinding object.\nThis is a wrapper around MouseBinding.new():enable()\n\nParameters:\n * mods - A table or a string containing (as elements, or as substrings with any\n   separator) the keyboard modifiers required, which should be zero or more of the\n   following:\n     \"cmd\", \"command\" or \"⌘\"\n     \"ctrl\", \"control\" or \"⌃\"\n     \"alt\", \"option\" or \"⌥\"\n     \"shift\" or \"⇧\"\n * typeName - A string containing the name of an event type, as described in\n   hs.eventtap.event.types\n * message - A string containing a message to be displayed via hs.alert()\n   when the mouse event has been triggered; if nil, no alert will be shown\n   Note that unlike hs.hotkey, this parameter must be present.\n * fn - A function that will be called when mouse event is detected.\n\nReturns:\n *  MouseBinding istance.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:createBinding()",
+        "type" : "Method",
+        "returns" : [
+          " *  MouseBinding istance."
+        ],
+        "desc" : "Create a new binding between a mouse event and an action. Returns a",
+        "parameters" : [
+          " * mods - A table or a string containing (as elements, or as substrings with any",
+          "   separator) the keyboard modifiers required, which should be zero or more of the",
+          "   following:",
+          "     \"cmd\", \"command\" or \"⌘\"",
+          "     \"ctrl\", \"control\" or \"⌃\"",
+          "     \"alt\", \"option\" or \"⌥\"",
+          "     \"shift\" or \"⇧\"",
+          " * typeName - A string containing the name of an event type, as described in",
+          "   hs.eventtap.event.types",
+          " * message - A string containing a message to be displayed via hs.alert()",
+          "   when the mouse event has been triggered; if nil, no alert will be shown",
+          "   Note that unlike hs.hotkey, this parameter must be present.",
+          " * fn - A function that will be called when mouse event is detected.",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:debug(enable)",
+        "stripped_doc" : [
+          "Enable or disable debugging",
+          ""
+        ],
+        "name" : "debug",
+        "doc" : "Enable or disable debugging\n\nParameters:\n * enable - Boolean indicating whether debugging should be on\n\nReturns:\n * Nothing",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:debug(enable)",
+        "type" : "Method",
+        "returns" : [
+          " * Nothing"
+        ],
+        "desc" : "Enable or disable debugging",
+        "parameters" : [
+          " * enable - Boolean indicating whether debugging should be on",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:init()",
+        "stripped_doc" : [
+          "Initializes a MouseBind",
+          "When a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua",
+          "from the relevant s.",
+          "Do generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.",
+          "in the main scope of your init.lua. Instead, it should simply prepare an object",
+          "with methods to be used later, then return the object.",
+          ""
+        ],
+        "name" : "init",
+        "doc" : "Initializes a MouseBind\nWhen a user calls hs.loadSpoon(), Hammerspoon will load and execute init.lua\nfrom the relevant s.\nDo generally not perform any work, map any hotkeys, start any timers\/watchers\/etc.\nin the main scope of your init.lua. Instead, it should simply prepare an object\nwith methods to be used later, then return the object.\n\nParameters:\n * None\n\nReturns:\n * MouseBind object",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:init()",
+        "type" : "Method",
+        "returns" : [
+          " * MouseBind object"
+        ],
+        "desc" : "Initializes a MouseBind",
+        "parameters" : [
+          " * None",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:start()",
+        "stripped_doc" : [
+          "Start background activity.",
+          ""
+        ],
+        "name" : "start",
+        "doc" : "Start background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * MouseBind object",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:start()",
+        "type" : "Method",
+        "returns" : [
+          " * MouseBind object"
+        ],
+        "desc" : "Start background activity.",
+        "parameters" : [
+          " * param - Some parameter",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBind:stop()",
+        "stripped_doc" : [
+          "Stop background activity.",
+          ""
+        ],
+        "name" : "stop",
+        "doc" : "Stop background activity.\n\nParameters:\n * param - Some parameter\n\nReturns:\n * MouseBind object",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBind:stop()",
+        "type" : "Method",
+        "returns" : [
+          " * MouseBind object"
+        ],
+        "desc" : "Stop background activity.",
+        "parameters" : [
+          " * param - Some parameter",
+          ""
+        ]
+      }
+    ],
+    "name" : "MouseBind"
+  },
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+      {
+        "def" : "MouseBinding.new()",
+        "stripped_doc" : [
+          "Create a new binding between a mouse event and an action. Returns a",
+          "MouseBinding object. Note that the enable() method must be called before",
+          "it is effective.",
+          ""
+        ],
+        "name" : "new",
+        "doc" : "Create a new binding between a mouse event and an action. Returns a\nMouseBinding object. Note that the enable() method must be called before\nit is effective.\n\nParameters:\n * mods - A table or a string containing (as elements, or as substrings with any\n   separator) the keyboard modifiers required, which should be zero or more of the\n   following:\n     \"cmd\", \"command\" or \"⌘\"\n     \"ctrl\", \"control\" or \"⌃\"\n     \"alt\", \"option\" or \"⌥\"\n     \"shift\" or \"⇧\"\n * typeName - A string containing the name of an event type, as described in\n   hs.eventtap.event.types\n * message - A string containing a message to be displayed via hs.alert()\n   when the mouse event has been triggered; if nil, no alert will be shown\n   Note that unlike hs.hotkey, this parameter must be present.\n * fn - A function that will be called when mouse event is detected.\n   It can optionally return two values. Firstly, a boolean, true if the event\n   should be deleted, false if it should propagate to any other applications\n   watching for that event. Secondly, a table of events to post.\n\nReturns: MouseBinding instance, or nil on error.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBinding.new()",
+        "type" : "Function",
+        "returns" : [
+
+        ],
+        "desc" : "Create a new binding between a mouse event and an action. Returns a",
+        "parameters" : [
+          " * mods - A table or a string containing (as elements, or as substrings with any",
+          "   separator) the keyboard modifiers required, which should be zero or more of the",
+          "   following:",
+          "     \"cmd\", \"command\" or \"⌘\"",
+          "     \"ctrl\", \"control\" or \"⌃\"",
+          "     \"alt\", \"option\" or \"⌥\"",
+          "     \"shift\" or \"⇧\"",
+          " * typeName - A string containing the name of an event type, as described in",
+          "   hs.eventtap.event.types",
+          " * message - A string containing a message to be displayed via hs.alert()",
+          "   when the mouse event has been triggered; if nil, no alert will be shown",
+          "   Note that unlike hs.hotkey, this parameter must be present.",
+          " * fn - A function that will be called when mouse event is detected.",
+          "   It can optionally return two values. Firstly, a boolean, true if the event",
+          "   should be deleted, false if it should propagate to any other applications",
+          "   watching for that event. Secondly, a table of events to post.",
+          "",
+          "Returns: MouseBinding instance, or nil on error."
+        ]
+      }
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "desc" : "UNKNOWN DESC",
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "Constructor" : [
+
+    ],
+    "doc" : "",
+    "Method" : [
+      {
+        "def" : "MouseBinding:disable()",
+        "stripped_doc" : [
+          "Disable the binding.",
+          ""
+        ],
+        "name" : "disable",
+        "doc" : "Disable the binding.\n\nParameters:\n* None\n\nReturns:\n* The Mousebinding instance.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBinding:disable()",
+        "type" : "Method",
+        "returns" : [
+          "* The Mousebinding instance."
+        ],
+        "desc" : "Disable the binding.",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBinding:enable()",
+        "stripped_doc" : [
+          "Enable the binding.",
+          ""
+        ],
+        "name" : "enable",
+        "doc" : "Enable the binding.\n\nParameters:\n* None\n\nReturns:\n* The Mousebinding instance.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBinding:enable()",
+        "type" : "Method",
+        "returns" : [
+          "* The Mousebinding instance."
+        ],
+        "desc" : "Enable the binding.",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "def" : "MouseBinding.new()",
+        "stripped_doc" : [
+          "Create a new binding between a mouse event and an action. Returns a",
+          "MouseBinding object. Note that the enable() method must be called before",
+          "it is effective.",
+          ""
+        ],
+        "name" : "new",
+        "doc" : "Create a new binding between a mouse event and an action. Returns a\nMouseBinding object. Note that the enable() method must be called before\nit is effective.\n\nParameters:\n * mods - A table or a string containing (as elements, or as substrings with any\n   separator) the keyboard modifiers required, which should be zero or more of the\n   following:\n     \"cmd\", \"command\" or \"⌘\"\n     \"ctrl\", \"control\" or \"⌃\"\n     \"alt\", \"option\" or \"⌥\"\n     \"shift\" or \"⇧\"\n * typeName - A string containing the name of an event type, as described in\n   hs.eventtap.event.types\n * message - A string containing a message to be displayed via hs.alert()\n   when the mouse event has been triggered; if nil, no alert will be shown\n   Note that unlike hs.hotkey, this parameter must be present.\n * fn - A function that will be called when mouse event is detected.\n   It can optionally return two values. Firstly, a boolean, true if the event\n   should be deleted, false if it should propagate to any other applications\n   watching for that event. Secondly, a table of events to post.\n\nReturns: MouseBinding instance, or nil on error.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBinding.new()",
+        "type" : "Function",
+        "returns" : [
+
+        ],
+        "desc" : "Create a new binding between a mouse event and an action. Returns a",
+        "parameters" : [
+          " * mods - A table or a string containing (as elements, or as substrings with any",
+          "   separator) the keyboard modifiers required, which should be zero or more of the",
+          "   following:",
+          "     \"cmd\", \"command\" or \"⌘\"",
+          "     \"ctrl\", \"control\" or \"⌃\"",
+          "     \"alt\", \"option\" or \"⌥\"",
+          "     \"shift\" or \"⇧\"",
+          " * typeName - A string containing the name of an event type, as described in",
+          "   hs.eventtap.event.types",
+          " * message - A string containing a message to be displayed via hs.alert()",
+          "   when the mouse event has been triggered; if nil, no alert will be shown",
+          "   Note that unlike hs.hotkey, this parameter must be present.",
+          " * fn - A function that will be called when mouse event is detected.",
+          "   It can optionally return two values. Firstly, a boolean, true if the event",
+          "   should be deleted, false if it should propagate to any other applications",
+          "   watching for that event. Secondly, a table of events to post.",
+          "",
+          "Returns: MouseBinding instance, or nil on error."
+        ]
+      },
+      {
+        "def" : "MouseBinding:disable()",
+        "stripped_doc" : [
+          "Disable the binding.",
+          ""
+        ],
+        "name" : "disable",
+        "doc" : "Disable the binding.\n\nParameters:\n* None\n\nReturns:\n* The Mousebinding instance.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBinding:disable()",
+        "type" : "Method",
+        "returns" : [
+          "* The Mousebinding instance."
+        ],
+        "desc" : "Disable the binding.",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      },
+      {
+        "def" : "MouseBinding:enable()",
+        "stripped_doc" : [
+          "Enable the binding.",
+          ""
+        ],
+        "name" : "enable",
+        "doc" : "Enable the binding.\n\nParameters:\n* None\n\nReturns:\n* The Mousebinding instance.",
+        "notes" : [
+
+        ],
+        "signature" : "MouseBinding:enable()",
+        "type" : "Method",
+        "returns" : [
+          "* The Mousebinding instance."
+        ],
+        "desc" : "Enable the binding.",
+        "parameters" : [
+          "* None",
+          ""
+        ]
+      }
+    ],
+    "name" : "MouseBinding"
+  }
+]
