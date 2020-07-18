@@ -130,4 +130,35 @@ function MouseBind:createBinding(mods, typeName, message, fn)
   return b
 end
 
+--- MouseBind:debugEvents()
+--- Method
+--- Log all events. Intended for debugging.
+---
+--- Parameters:
+---  * enable   boolean indicating if logging should be started or stopped.
+---
+--- Returns:
+---  * Nothing
+function MouseBind:debugEvents(enable)
+  -- Shut down any prior debugging
+  if self.debugLog then
+    self.debugLog = nil
+  end
+  if self.debugTap then
+    self.debugTap:stop()
+    self.debugTap = nil
+  end
+  -- And reenable if called for
+  if enable then
+    self.debugLog = hs.logger.new("DebugEvents", "verbose")
+    self.debugTap = hs.eventtap.new({"all"},
+      function(event)
+        self.debugLog.d(hs.eventtap.event.types[event:getType()])
+        return false -- Propagate event
+      end)
+    self.debugTap:start()
+    hs.timer.doAfter(30, function() self.debugTap:stop() end) -- DEBUG
+  end
+end
+
 return MouseBind
