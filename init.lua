@@ -1,4 +1,10 @@
 --- === MouseBind ===
+--- Allows binding mouse actions to functions. Requires access to the Mac accessibility
+--- stack to work as described in http://www.hammerspoon.org/faq/
+--- Allows binding to any events described in hs.eventtap.event.types which is actually
+--- more than mouse events, but it's not intended to replace hs.hotkey, which is
+--- more effective for binding to key presses.
+
 local MouseBind = {}
 
 
