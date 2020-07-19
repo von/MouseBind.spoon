@@ -47,10 +47,14 @@ function MouseBinding.new(mods, typeName, message, fn)
   self.mods = mods
   self.type = hs.eventtap.event.types[typeName]
   if not self.type then
-    module.log.ef("Unrecognized type \"%s\"", typeName)
+    self.log.ef("Unrecognized type \"%s\"", typeName)
     return nil
   end
   self.message = message
+  if not fn then
+    self.log.e("Callback function is nil")
+    return nil
+  end
   self.fn = fn
   self.callback = function(event)
     local flags = event:getFlags()
