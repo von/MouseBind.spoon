@@ -167,4 +167,27 @@ function MouseBind:debugEvents(enable)
   end
 end
 
+--- MouseBind:dragWindowExample()
+--- Function
+--- Example callback that lets one move a window by using a modifier key with a mouse
+--- drag event. Usage:
+--- MouseBind: createBinding({"alt"}, "leftMouseDragged", nil, MouseBind.dragWindowExample)
+---
+--- Parameters:
+---  * event - hs.eventtap.event instance
+---
+--- Returns:
+---  * delete - a boolean, true if the event should be deleted, false if it should
+---    propagate to any other applications watching for that event.
+---  * events - Optional table of events to post.
+function MouseBind.dragWindowExample(event)
+  local deltax = event:getProperty(hs.eventtap.event.properties.mouseEventDeltaX)
+  local deltay = event:getProperty(hs.eventtap.event.properties.mouseEventDeltaY)
+  local win = hs.window.frontmostWindow()
+  if win then
+    win:move(hs.geometry.point(deltax, deltay))
+  end
+  return true  -- Don't propagate the event
+end
+
 return MouseBind
