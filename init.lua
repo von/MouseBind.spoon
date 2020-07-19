@@ -10,7 +10,7 @@ local MouseBind = {}
 
 -- Metadata
 MouseBind.name="MouseBind"
-MouseBind.version="0.1"
+MouseBind.version="0.2"
 MouseBind.author="Von Welch"
 -- https://opensource.org/licenses/Apache-2.0
 MouseBind.license="Apache-2.0"
