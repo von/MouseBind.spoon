@@ -34,6 +34,7 @@ function MouseBind:debug(enable)
     self.log.d("Disabling debugging")
     self.log.setLogLevel('info')
   end
+  self.MouseBinding:debug(enable)
 end
 
 -- Methods

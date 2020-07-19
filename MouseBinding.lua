@@ -15,6 +15,25 @@ setmetatable(MouseBinding, {
 -- Set up logger
 MouseBinding.log = hs.logger.new("MouseBinding")
 
+--- MouseBinding:debug(enable)
+--- Method
+--- Enable or disable debugging
+---
+--- Parameters:
+---  * enable - Boolean indicating whether debugging should be on
+---
+--- Returns:
+---  * Nothing
+function MouseBinding:debug(enable)
+  if enable then
+    self.log.setLogLevel('debug')
+    self.log.d("Debugging enabled")
+  else
+    self.log.d("Disabling debugging")
+    self.log.setLogLevel('info')
+  end
+end
+
 --- MouseBinding.new()
 --- Function
 --- Create a new binding between a mouse event and an action. Returns a
@@ -44,6 +63,7 @@ function MouseBinding.new(mods, typeName, message, fn)
   MouseBinding.log.d("new() called")
   local self = setmetatable({}, MouseBinding)
   self.log = MouseBinding.log
+  self.log.d("New binding creating")
   self.mods = mods
   self.type = hs.eventtap.event.types[typeName]
   if not self.type then
