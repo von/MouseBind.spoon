@@ -63,7 +63,7 @@ function MouseBinding.new(mods, typeName, message, fn)
     if self.message then
       hs.alert(self.message)
     end
-    result, errormsg = pcall(self.fn)
+    result, errormsg = pcall(function() self.fn(event) end)
     if not result then
       self.log.ef("Error executing mouse binding: " .. errormsg)
       hs.alert.show("Error executing mouse binding. Disabling.")
