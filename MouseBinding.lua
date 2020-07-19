@@ -59,6 +59,7 @@ function MouseBinding.new(mods, typeName, message, fn)
   self.callback = function(event)
     local flags = event:getFlags()
     local type = event:getType()
+    local retval = true  -- delete event, false == propagate it
     self.log.df("Got event %s", hs.eventtap.event.types[type])
     if not flags:containExactly(self.mods) then
       return false  -- No match. Propagate event
@@ -67,15 +68,16 @@ function MouseBinding.new(mods, typeName, message, fn)
     if self.message then
       hs.alert(self.message)
     end
-    result, errormsg = pcall(function() self.fn(event) end)
+    result, errormsg = pcall(function() retval = self.fn(event) end)
     if not result then
       self.log.ef("Error executing mouse binding: " .. errormsg)
       hs.alert.show("Error executing mouse binding. Disabling.")
       -- Disable ourselves so we're not disabling UI
       self:disable()
-      return false  -- Propagate event
+      return true  -- Delete event
     end
-    return true  -- Delete event
+    self.log.df("retval: %s", tostring(retval))
+    return retval, {event}
   end
   self.tap = hs.eventtap.new({self.type}, self.callback)
   return self
