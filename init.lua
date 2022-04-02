@@ -14,7 +14,7 @@ MouseBind.version="0.2"
 MouseBind.author="Von Welch"
 -- https://opensource.org/licenses/Apache-2.0
 MouseBind.license="Apache-2.0"
-MouseBind.homepage="https://github.com/von/MounseBind.spoon"
+MouseBind.homepage="https://github.com/von/MouseBind.spoon"
 
 
 --- MouseBind:debug(enable)
